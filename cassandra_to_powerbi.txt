@@ -1,0 +1,18 @@
+Connect Cassandra to PowerBI:
+
+*usar terminal*
+- docker stop cassandra
+- docker rm cassandra
+- docker run -d --name cassandra -p 9042:9042 -e CASSANDRA_BROADCAST_ADDRESS=host.docker.internal cassandra:latest
+
+*pesquisar odbs na barra de pesquisa do windows*
+*abrir ODBS Data Sources*
+*adicionar...*
+*selecionar Cassandra ODBC driver*
+*inserir detalhes da base de dados cassandra (server address, port, and authentication details)*
+
+*terminal*
+- pip install pyodbc
+
+*correr python script (pasta AIS)*
+- python cassandra_query.py
